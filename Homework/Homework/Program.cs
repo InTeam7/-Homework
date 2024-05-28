@@ -14,6 +14,15 @@ class Program
 
         Console.WriteLine(GetMinX(0, 0, 2) != "Impossible");
         Console.WriteLine(GetMinX(0, 0, 0) != "Impossible");
+
+        Console.WriteLine(IsLeapYear(2014));
+        Console.WriteLine(IsLeapYear(1999));
+        Console.WriteLine(IsLeapYear(8992));
+        Console.WriteLine(IsLeapYear(1));
+        Console.WriteLine(IsLeapYear(14));
+        Console.WriteLine(IsLeapYear(400));
+        Console.WriteLine(IsLeapYear(600));
+        Console.WriteLine(IsLeapYear(3200));
     }
     private static string GetMinX(int a, int b, int c)
     {
@@ -27,5 +36,9 @@ class Program
             }
         }
         return result;
+    }
+    public static bool IsLeapYear(int year)
+    {
+        return year % 4 == 0 && (year % 400 == 0 || !(year % 100 == 0));
     }
 }
