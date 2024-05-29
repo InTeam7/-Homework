@@ -65,7 +65,13 @@ class Program
         var dy = Math.Abs(to[1] - from[1]); 
         return from != to && (dx == 0 || dy == 0 || dx == dy);
     }
-    
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="a"></param>
+    /// <param name="b"></param>
+    /// <param name="c"></param>
+    /// <returns></returns>
     public static int MiddleOf(int a, int b, int c)
     {
         if (a >= b)
