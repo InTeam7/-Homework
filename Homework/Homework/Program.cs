@@ -27,6 +27,15 @@ class Program
         TestMove("a1", "d4");
         TestMove("f4", "e7");
         TestMove("a1", "a4");
+
+        Console.WriteLine(MiddleOf(5, 0, 100)); // => 5
+        Console.WriteLine(MiddleOf(12, 12, 11)); // => 12
+        Console.WriteLine(MiddleOf(1, 1, 1)); // => 1
+        Console.WriteLine(MiddleOf(2, 3, 2));
+        Console.WriteLine(MiddleOf(8, 8, 8));
+        Console.WriteLine(MiddleOf(5, 0, 1));
+        Console.WriteLine(MiddleOf(55, 65, 75));
+
     }
     private static string GetMinX(int a, int b, int c)
     {
@@ -55,5 +64,21 @@ class Program
         var dx = Math.Abs(to[0] - from[0]); 
         var dy = Math.Abs(to[1] - from[1]); 
         return from != to && (dx == 0 || dy == 0 || dx == dy);
+    }
+    public static int MiddleOf(int a, int b, int c)
+    {
+        if (a >= b)
+        {
+            if (a <= c) return a;
+            else if (b >= c) return b;
+            else return c;
+        }
+        else if (a <= b)
+        {
+            if (a >= c) return a;
+            else if (b <= c) return b;
+            else return c;
+        }
+        return a;
     }
 }
