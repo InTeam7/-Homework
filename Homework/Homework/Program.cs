@@ -23,6 +23,10 @@ class Program
         Console.WriteLine(IsLeapYear(400));
         Console.WriteLine(IsLeapYear(600));
         Console.WriteLine(IsLeapYear(3200));
+
+        TestMove("a1", "d4");
+        TestMove("f4", "e7");
+        TestMove("a1", "a4");
     }
     private static string GetMinX(int a, int b, int c)
     {
@@ -40,5 +44,16 @@ class Program
     public static bool IsLeapYear(int year)
     {
         return year % 4 == 0 && (year % 400 == 0 || !(year % 100 == 0));
+    }
+
+    public static void TestMove(string from, string to)
+    {
+        Console.WriteLine("{0}-{1} {2}", from, to, IsCorrectMove(from, to));
+    }
+    public static bool IsCorrectMove(string from, string to)
+    {
+        var dx = Math.Abs(to[0] - from[0]); 
+        var dy = Math.Abs(to[1] - from[1]); 
+        return from != to && (dx == 0 || dy == 0 || dx == dy);
     }
 }
