@@ -36,6 +36,11 @@ class Program
         Console.WriteLine(MiddleOf(5, 0, 1));
         Console.WriteLine(MiddleOf(55, 65, 75));
 
+        Console.WriteLine(GetMinPowerOfTwoLargerThan(2)); // => 4
+        Console.WriteLine(GetMinPowerOfTwoLargerThan(15)); // => 16
+        Console.WriteLine(GetMinPowerOfTwoLargerThan(-2)); // => 1
+        Console.WriteLine(GetMinPowerOfTwoLargerThan(-100));
+        Console.WriteLine(GetMinPowerOfTwoLargerThan(100));
     }
     private static string GetMinX(int a, int b, int c)
     {
@@ -61,8 +66,8 @@ class Program
     }
     public static bool IsCorrectMove(string from, string to)
     {
-        var dx = Math.Abs(to[0] - from[0]); 
-        var dy = Math.Abs(to[1] - from[1]); 
+        var dx = Math.Abs(to[0] - from[0]);
+        var dy = Math.Abs(to[1] - from[1]);
         return from != to && (dx == 0 || dy == 0 || dx == dy);
     }
     /// <summary>
@@ -87,5 +92,15 @@ class Program
             else return c;
         }
         return a;
+    }
+
+    private static int GetMinPowerOfTwoLargerThan(int number)
+    {
+        int result = 1;
+        while (!(result > number)) 
+        {
+            result *= 2;
+        }
+        return result;
     }
 }
