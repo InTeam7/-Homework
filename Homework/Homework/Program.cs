@@ -56,6 +56,12 @@ class Program
         Console.WriteLine(GetMinPowerOfTwoLargerThan(-100));
         Console.WriteLine(GetMinPowerOfTwoLargerThan(100));
 
+        WriteTextWithBorder("Menu:");
+        WriteTextWithBorder("");
+        WriteTextWithBorder(" ");
+        WriteTextWithBorder("Game Over!");
+        WriteTextWithBorder("Select level:");
+
     }
     private static string GetMinX(int a, int b, int c)
     {
@@ -132,5 +138,17 @@ class Program
             result *= 2;
         }
         return result;
+    }
+
+    private static void WriteTextWithBorder(string text)
+    {
+        string upAndDown = "";
+        for (int i = 0; i < text.Length; i++)
+        {
+            upAndDown += "-";
+        }
+        Console.WriteLine($"+-{upAndDown}-+");
+        Console.WriteLine($"| {text} |");
+        Console.WriteLine($"+-{upAndDown}-+");
     }
 }
