@@ -62,6 +62,8 @@ class Program
         WriteTextWithBorder("Game Over!");
         WriteTextWithBorder("Select level:");
 
+        GetFirstEvenNumbers(3);
+
     }
     private static string GetMinX(int a, int b, int c)
     {
@@ -150,5 +152,15 @@ class Program
         Console.WriteLine($"+-{upAndDown}-+");
         Console.WriteLine($"| {text} |");
         Console.WriteLine($"+-{upAndDown}-+");
+    }
+    public static int[] GetFirstEvenNumbers(int count)
+    {
+        int[] evenNumbers = new int[count];
+        for (int i = 0; i < count; i++)
+        {
+            evenNumbers[i] = (i+1) *2;
+            Console.WriteLine(evenNumbers[i]);
+        }
+        return evenNumbers;
     }
 }
