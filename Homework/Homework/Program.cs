@@ -64,6 +64,9 @@ class Program
 
         GetFirstEvenNumbers(3);
 
+        int[] arr = new int[] { 1, 2, 3, 4, 5, 1, 1, 1, 5 };
+        GetElementCount(arr, 2);
+
     }
     private static string GetMinX(int a, int b, int c)
     {
@@ -162,5 +165,19 @@ class Program
             Console.WriteLine(evenNumbers[i]);
         }
         return evenNumbers;
+    }
+    public static int GetElementCount(int[] arr, int itemToCount)
+    {
+        int count = 0;
+        for (int i = 0; itemToCount < i; i++)
+        {
+            if (arr[i] == itemToCount) 
+            { 
+                count++;
+                
+            }
+            Console.WriteLine(count);
+        }
+        return count;
     }
 }
