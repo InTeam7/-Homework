@@ -166,6 +166,7 @@ class Program
         }
         return evenNumbers;
     }
+    //dfsdfdf
     public static int GetElementCount(int[] arr, int itemToCount)
     {
         int count = 0;
