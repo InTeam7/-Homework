@@ -189,10 +189,10 @@ class Program
         int indexOfNumb = 0;
         for (double i = 0; array.Length > i; i++)
         {
-            if (maxNumber < array[(int)i])
+            if (maxNumber < array[i])
             {
-                maxNumber = array[(int)i];
-                indexOfNumb = (int)i;
+                maxNumber = array[i];
+                indexOfNumb = i;
             }
         }
         Console.WriteLine(maxNumber);
