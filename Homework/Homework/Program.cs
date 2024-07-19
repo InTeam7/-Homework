@@ -67,6 +67,9 @@ class Program
         int[] arr = new int[] { 1, 2, 3, 4, 5, 1, 1, 1, 5 };
         GetElementCount(arr, 2);
 
+        double[] array = new double[] { 1.12, 2.22, 67.1, 100.21, 987.1 };
+        MaxIndex(array);
+
     }
     private static string GetMinX(int a, int b, int c)
     {
@@ -179,5 +182,21 @@ class Program
             Console.WriteLine(count);
         }
         return count;
+    }
+    public static double MaxIndex(double[] array)
+    {
+        double maxNumber = 0;
+        int indexOfNumb = 0;
+        for (double i = 0; array.Length > i; i++)
+        {
+            if (maxNumber < array[i])
+            {
+                maxNumber = array[i];
+                indexOfNumb = i;
+            }
+        }
+        Console.WriteLine(maxNumber);
+        Console.WriteLine(indexOfNumb);
+        return maxNumber;
     }
 }
